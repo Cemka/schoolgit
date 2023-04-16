@@ -18,7 +18,7 @@ public class EnumMaxMinFromFile {
         list = getIntegerFile(file);
         if(list.stream().noneMatch(s -> s % 2 == 0 && s > 0)){
             System.out.println("Is not enum");
-        }else {
+        } else {
             max = list.stream().filter(s -> s % 2 == 0 && s > 0).max(Comparator.naturalOrder()).get();
             min = list.stream().filter(s -> s % 2 == 0 && s > 0).min(Comparator.naturalOrder()).get();
             System.out.println("Max:" + max + " " + "Min: " + min);

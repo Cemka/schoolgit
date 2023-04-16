@@ -24,16 +24,8 @@ public class SortSumWrite {
                 return sum;
                     }
             )).forEach(list::add);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
-
-
-        try {
             Path filePath = Paths.get(EnumMaxMinFromFile.PATH_OUT);
             BufferedWriter writer = Files.newBufferedWriter(filePath);
-
             for (String line : list) {
                 writer.write(line);
                 writer.newLine();
